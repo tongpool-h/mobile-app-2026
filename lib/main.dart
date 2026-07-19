@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'pages/home_page.dart';
+<<<<<<< HEAD
 import 'pages/profile_page.dart';
+=======
+import 'pages/login_page.dart';
+import 'pages/profile_page.dart';
+import 'pages/register_page.dart';
+
+>>>>>>> 53147f8 (Updated)
 
 void main() {
   runApp(const MyApp());
@@ -40,15 +47,26 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
 
       // First screen
+<<<<<<< HEAD
       // home: const HomePage(),
 
       initialRoute: '/profile',
+=======
+      // home: const LoginPage(),
+
+      initialRoute: '/register',
+>>>>>>> 53147f8 (Updated)
       // initialRoute: '/',
 
       routes: {
         '/': (context) => const HomePage(),
         // '/home': (context) => const HomePage(),
         '/profile': (context) => const ProfilePage(),
+<<<<<<< HEAD
+=======
+        '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
+>>>>>>> 53147f8 (Updated)
       },
     );
   }
