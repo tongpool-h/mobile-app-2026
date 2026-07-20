@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/app_colors.dart';
 import '../constants/app_text_styles.dart';
+// import 'edit_profile_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -38,19 +39,27 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      bottom: 5,
-                      right: 10,
-                      child: Container(
-                        width: 20,
-                        height: 20,
-                        decoration: const BoxDecoration(
-                          // shape: BoxShape.circle,
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                          color: AppColors.accent,
-                          // border: Border.all(color: AppColors.border, width: ),
-                        ),
-                        child: const Icon(Icons.edit,
-                            color: Colors.black, size: 12),
+                      bottom: 0,
+                      right: 5,
+                      child: CircleAvatar(
+                        foregroundColor: AppColors.textLight,
+                        backgroundColor: AppColors.accent,
+                        radius: 15,
+                        child: IconButton(
+                            onPressed: () {
+                              // print('Edit Profile');
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(
+                              //     builder: (context) => const EditProfilePage(),
+                              //   ),
+                              // );
+                            },
+                            icon: const Icon(
+                              Icons.edit,
+                              size: 15,
+                              color: AppColors.darkSurface,
+                            )),
                       ),
                     ),
                   ],
@@ -75,10 +84,10 @@ class ProfilePage extends StatelessWidget {
               // const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
+                child: Ink(
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-                  alignment: Alignment.centerLeft,
+                  // alignment: Alignment.centerLeft,
                   // color: AppColors.surface,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -155,10 +164,10 @@ class ProfilePage extends StatelessWidget {
               // const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
+                child: Ink(
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-                  alignment: Alignment.centerLeft,
+                  // alignment: Alignment.centerLeft,
                   // color: AppColors.surface,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -247,7 +256,9 @@ class ProfilePage extends StatelessWidget {
                         title: 'Help Center',
                         subtitle: 'Find answers to common questions',
                         trailingIcon: Icons.arrow_forward_ios,
-                        onTap: () {},
+                        onTap: () {
+                          print('Help Center');
+                        },
                       ),
                       Divider(
                           color: AppColors.divider.withOpacity(0.5),
@@ -293,8 +304,8 @@ class ItemMenuSetting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      hoverColor: AppColors.border
-          .withOpacity(0.15), // Change background color on hover
+      hoverColor:
+          AppColors.border.withOpacity(0.3), // Change background color on hover
       leading: Icon(icon, color: AppColors.primary),
       title: Text(title, style: AppTextStyles.bodyMedium),
       subtitle: Text(subtitle, style: AppTextStyles.bodySmall),
