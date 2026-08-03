@@ -4,6 +4,7 @@ import 'pages/home_page.dart';
 import 'pages/profile_page.dart';
 import 'pages/login_page.dart';
 import 'pages/register_page.dart';
+// import 'pages/login_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
       // home: const HomePage(),
 
       initialRoute: '/',
+      // initialRoute: '/loginApp',
       // initialRoute: '/',
 
       routes: {
@@ -53,6 +55,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => const ProfilePage(),
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
+        // '/loginapp': (context) => const LoginApp(),
       },
     );
   }
