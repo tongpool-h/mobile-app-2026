@@ -3,10 +3,11 @@ import 'package:mobile_app/pages/intro_screen.dart';
 import 'package:mobile_app/pages/main_page.dart';
 
 import 'pages/home_page.dart';
+import 'pages/login_app.dart';
 import 'pages/profile_page.dart';
 import 'pages/login_page.dart';
 import 'pages/register_page.dart';
-import 'pages/login_app.dart';
+// import 'pages/login_app.dart';
 
 void main() {
   runApp(const MyApp());
