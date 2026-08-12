@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_app/pages/intro_screen.dart';
+import 'package:mobile_app/pages/main_page.dart';
 
 import 'pages/home_page.dart';
 import 'pages/profile_page.dart';
@@ -45,7 +47,7 @@ class MyApp extends StatelessWidget {
       // First screen
       // home: const HomePage(),
 
-      initialRoute: '/loginApp',
+      initialRoute: '/intro',
       // initialRoute: '/',
 
       routes: {
@@ -55,6 +57,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
         '/loginapp': (context) => const LoginApp(),
+        '/mainPage': (context) => const MainPage(),
+        '/intro': (context) => const IntroScreen(),
       },
     );
   }
